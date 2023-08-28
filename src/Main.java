@@ -11,7 +11,7 @@ public class Main {
                 new Ravenclow("Лин ", 2, 1, 4, 1, 1, 3),
         };
         for (int i = 0; i < hogwarts.length; i++) {
-            for (int j = i+1; j <hogwarts.length-1 ; j++) {
+            for (int j = i+i; j <hogwarts.length-1 ; j++) {
                 hogwarts[i].compare(hogwarts[j]);
             }
         }
