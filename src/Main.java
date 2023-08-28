@@ -15,5 +15,9 @@ public class Main {
                 hogwarts[i].compare(hogwarts[j]);
             }
         }
+        Griffindor harry = (Griffindor) hogwarts[0];
+        Griffindor ron = (Griffindor) hogwarts[2];
+
+        harry.compare(ron);
 }
     }
