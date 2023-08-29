@@ -1,9 +1,9 @@
 public class Hogwarts {
-    protected final String name;
-    protected int power;
-    protected int transgression;
+    private final String name;
+    private int power;
+    private int transgression;
 
-    public Hogwarts(String name, int power, int transgression) {
+    Hogwarts(String name, int power, int transgression) {
         this.name = name;
         this.power = power;
         this.transgression = transgression;

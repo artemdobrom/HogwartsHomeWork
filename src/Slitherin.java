@@ -11,11 +11,15 @@ public class Slitherin extends Hogwarts {
         this.ambition = ambition;
     }
 
+    private int sumFeatures() {
+        return this.cunning + this.decisiveness + this.ambition;
+    }
+
     public void compare(Slitherin slitherin) {
-        if (cunning + decisiveness + ambition > slitherin.getCunning() + slitherin.getDecisiveness() + slitherin.getAmbition()) {
-            System.out.println(name + " сильнее " + slitherin.name);
+        if (this.sumFeatures() > slitherin.sumFeatures()) {
+            System.out.println(getName() + " сильнее " + slitherin.getName());
         } else {
-            System.out.println(slitherin.name + " сильнее " + name);
+            System.out.println(slitherin.getName() + " сильнее " + getName());
         }
     }
 
@@ -35,11 +39,13 @@ public class Slitherin extends Hogwarts {
     @Override
     public String toString() {
         return "Slitherin{" +
+                super.toString() +
                 "cunning=" + cunning +
                 ", decisiveness=" + decisiveness +
                 ", ambition=" + ambition +
-                ", power=" + power +
-                ", transgression=" + transgression +
                 '}';
     }
+
+
+
 }

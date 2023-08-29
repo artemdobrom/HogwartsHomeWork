@@ -10,11 +10,15 @@ public class Puffindui extends Hogwarts {
         this.honest = honest;
     }
 
+    private int sumFeatures() {
+        return this.industriousness + this.faithful + this.honest;
+    }
+
     public void compare(Puffindui puffindui) {
-        if (industriousness + faithful + honest > puffindui.getIndustriousness() + puffindui.getFaithful() + puffindui.getHonest()) {
-            System.out.println(name + " сильнее " + puffindui.name);
+        if (this.sumFeatures() > puffindui.sumFeatures()) {
+            System.out.println(getName() + " сильнее " + puffindui.getName());
         } else {
-            System.out.println(puffindui.name + " сильнее " + name);
+            System.out.println(puffindui.getName() + " сильнее " + getName());
         }
     }
 
@@ -33,11 +37,10 @@ public class Puffindui extends Hogwarts {
     @Override
     public String toString() {
         return "Puffindui{" +
+                super.toString() +
                 "industriousness=" + industriousness +
                 ", faithful=" + faithful +
                 ", honest=" + honest +
-                ", power=" + power +
-                ", transgression=" + transgression +
                 '}';
     }
 }

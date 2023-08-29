@@ -13,11 +13,15 @@ public class Ravenclow extends Hogwarts {
         this.fullOfCreativity = fullOfCreativity;
     }
 
+    private int sumFeatures() {
+        return this.smart + this.wise + this.witty+this.fullOfCreativity;
+    }
+
     public void compare(Ravenclow ravenclow) {
-        if (smart + wise + witty + fullOfCreativity > ravenclow.getSmart() + ravenclow.getWise() + ravenclow.getWitty() + ravenclow.getFullOfCreativity()) {
-            System.out.println(name + " сильнее " + ravenclow.name);
+        if (this.sumFeatures() > ravenclow.sumFeatures()) {
+            System.out.println(getName() + " сильнее " + ravenclow.getName());
         } else {
-            System.out.println(ravenclow.name + " сильнее " + name);
+            System.out.println(ravenclow.getName() + " сильнее " + getName());
         }
     }
 
@@ -41,12 +45,11 @@ public class Ravenclow extends Hogwarts {
     @Override
     public String toString() {
         return "Ravenclow{" +
+                super.toString() +
                 "smart=" + smart +
                 ", wise=" + wise +
                 ", witty=" + witty +
                 ", fullOfCreativity=" + fullOfCreativity +
-                ", power=" + power +
-                ", transgression=" + transgression +
                 '}';
     }
 }
